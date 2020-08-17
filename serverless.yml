@@ -1,9 +1,9 @@
 # serverless.yml
 
-service: my-express-application
+service: my-express-application-2
 
 custom:
-  tableName: users-table-dev
+  tableName: users-table-dev2
 
 provider:
   name: aws
@@ -18,10 +18,13 @@ provider:
         - dynamodb:GetItem
         - dynamodb:PutItem
         - dynamodb:UpdateItem
-        - dynamodb:DeleteItem
-        - translate:*
+        - dynamodb:DeleteItem        
       Resource:
         - { "Fn::GetAtt": ["UsersDynamoDBTable", "Arn" ] }
+    - Effect: 'Allow'
+      Action:
+        - translate:*
+      Resource: '*'
   environment:
     USERS_TABLE: ${self:custom.tableName}
 
