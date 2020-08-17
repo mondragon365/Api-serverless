@@ -3,7 +3,7 @@
 service: my-express-application-2
 
 custom:
-  tableName: users-table-dev2
+  tableName: users-table-dev
 
 provider:
   name: aws
