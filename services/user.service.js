@@ -6,6 +6,10 @@ class UserService {
         this._userBusiness = new UserBusiness();
     }
 
+    async getAll() {
+        const entities = await this._userBusiness.getAll();
+        return entities;
+    }
     async get(id) {
         const entity = await this._userBusiness.get(id);
         return entity;
@@ -14,7 +18,6 @@ class UserService {
         const createdEntity = await this._userBusiness.create(entity);
         return createdEntity;
     }
-
 }
 
 module.exports = UserService;

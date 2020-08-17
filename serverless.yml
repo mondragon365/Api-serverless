@@ -3,7 +3,7 @@
 service: my-express-application
 
 custom:
-  tableName: 'users-table-${self:provider.stage}'
+  tableName: users-table-dev
 
 provider:
   name: aws
