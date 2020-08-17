@@ -3,12 +3,16 @@ const { Router } = require("express");
 // const cors = require("cors");
 // const compression = require("compression");
 const PeopleRoutes = require('./people.routes');
+const FilmRoutes = require('./film.routes');
+const UserRoutes = require('./user.routes');
 
 
 module.exports = function () {
     const router = Router();
     const apiRoute = Router();
     const peopleRoutes = new PeopleRoutes();
+    const filmRoutes = new FilmRoutes();
+    const userRoutes = new UserRoutes();
 
     // apiRoute
     //     .use(cors())
@@ -16,8 +20,9 @@ module.exports = function () {
     //     .use(compression());
 
     apiRoute.use("/people", peopleRoutes);
+    apiRoute.use("/films", filmRoutes);
+    apiRoute.use("/user", userRoutes);
 
-    //apiRoute.use("/films", FilmsRoutes);
     router.use("/api", apiRoute);
 
     return router;

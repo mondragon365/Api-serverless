@@ -5,7 +5,12 @@ const AWS = require('aws-sdk');
 var translate = new AWS.Translate({ apiVersion: '2017-07-01' });
 const BaseService = require('./service');
 const Helpert = require('./helpert');
-const Router = require('./routes/index');
+const Router = require('./api/routes/index');
+const bodyParser = require('body-parser');
+
+
+app.use(bodyParser.json({ strict: false }));
+
 
 var router = new Router();
 app.use('/', router);
