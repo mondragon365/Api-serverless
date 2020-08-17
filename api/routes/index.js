@@ -1,27 +1,30 @@
 const { Router } = require("express");
-// const bodyParser = require("body-parser");
-// const cors = require("cors");
-// const compression = require("compression");
+const UserRoutes = require('./user.routes');
 const PeopleRoutes = require('./people.routes');
 const FilmRoutes = require('./film.routes');
-const UserRoutes = require('./user.routes');
-
+const PlanetsRoutes = require('./planet.routes');
+const SpeciesRoutes = require('./species.routes');
+const StarshipsRoutes = require('./starships.routes');
+const VehiclesRoutes = require('./vehicles.routes');
 
 module.exports = function () {
     const router = Router();
     const apiRoute = Router();
+    const userRoutes = new UserRoutes();
     const peopleRoutes = new PeopleRoutes();
     const filmRoutes = new FilmRoutes();
-    const userRoutes = new UserRoutes();
+    const planetsRoutes = new PlanetsRoutes();
+    const speciesRoutes = new SpeciesRoutes();
+    const starshipsRoutes = new StarshipsRoutes();
+    const vehiclesRoutes = new VehiclesRoutes();
 
-    // apiRoute
-    //     .use(cors())
-    //     .use(bodyParser.json())
-    //     .use(compression());
-
+    apiRoute.use("/user", userRoutes);
     apiRoute.use("/people", peopleRoutes);
     apiRoute.use("/films", filmRoutes);
-    apiRoute.use("/user", userRoutes);
+    apiRoute.use("/planets", planetsRoutes);
+    apiRoute.use("/species", speciesRoutes);
+    apiRoute.use("/starships", starshipsRoutes);
+    apiRoute.use("/vehicles", vehiclesRoutes);
 
     router.use("/api", apiRoute);
 

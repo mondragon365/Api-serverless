@@ -1,6 +1,6 @@
 # serverless.yml
 
-service: my-express-application-2
+service: my-express-application
 
 custom:
   tableName: users-table-dev
