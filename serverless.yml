@@ -1,9 +1,9 @@
 # serverless.yml
 
-service: my-express-application-5
+service: express-application-vga
 
 custom:
-  tableName: users-table-dev5
+  tableName: users-table-dev
 
 provider:
   name: aws
