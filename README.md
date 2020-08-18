@@ -7,7 +7,7 @@ Rest Api creada para automatizar la traduccion de las claves de los objetos prop
   * Cloudformation
   * NodeJs
   * Serverless
-## Istalacion:
+## Instalacion:
 1) git clone https://github.com/mondragon365/Api-serverless.git
 2) cd Api-serverless
 3) npm i
