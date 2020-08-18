@@ -3,7 +3,7 @@
 service: express-application-vga
 
 custom:
-  tableName: users-table-dev
+  tableName: users-table-devv
 
 provider:
   name: aws

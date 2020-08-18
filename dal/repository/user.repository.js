@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const USERS_TABLE = 'users-table-dev5';
+const USERS_TABLE = 'users-table-devv';
 const dynamoDb = new AWS.DynamoDB.DocumentClient({ 'region': 'us-west-2' });
 
 class UserRepository {
