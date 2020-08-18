@@ -12,6 +12,7 @@ Rest Api creada para automatizar la traduccion de las claves de los objetos prop
 2) cd Api-serverless
 3) npm i
 4) sls deploy
+5) npm test
 
 ## Documentacion:
 la documentacion de los metodos disponibles la puedes encontrar en este link.
